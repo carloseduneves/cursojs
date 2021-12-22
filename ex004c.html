@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de maioridade</title>
+</head>
+<body>
+    <script>
+        var idade = Number(window.prompt('Qual é a sua idade?'))
+        var res = idade >= 18 ? 'maior' : 'menor'
+
+        window.alert(`Você é ${res} de idade.`)
+
+        var peso = Number(window.prompt('Qual é o seu peso?'))
+
+        var res2 = peso >= 80 ? 'Você é gordo, precisa fazer exercícios físicos!' : 'Você é magro, continue cuidando da sua saúde!'
+
+        window.alert(res2)
+
+        window.alert('Vamos fazer um teste de personalidade com você. Então, responda sim ou não às questões a seguir. Clique em ok para continuar.')
+
+        var a = window.prompt('Você gosta de sempre estar perto das pessoas?')
+        var b = window.prompt('Você costuma sempre pensar muito antes de falar alguma coisa?')
+        var c = window.prompt('Você gosta de estar em lugares tranquilos ao invés de lugares agitados, como uma festa?')
+
+        var p = a == 'sim' && 'SIM' ? 0 : 1
+        var s = b == 'sim' && 'SIM' ? 1 : 0
+        var t = c == 'sim' && 'SIM' ? 1 : 0
+
+        var res = p + s + t == 3 ? 'Legal! Você é uma pessoa que tem a personalidade introvertida. Você é muito leal com seus amigos, e procura selecionar bem suas amizades.' : 'Uau! Você é uma pessoa extrovertida. Gosta de sempre estar com a galera e tam facilidade em fazer amigos.'
+
+        window.alert(res)
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imc</title>
+    <style>
+        button{
+            color: aquamarine;
+            background-color: blue;
+            box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.342);
+            border: none;
+             border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcule seu índice de massa corporal (IMC)</h1>
+    <button type="button" id="click">Clique aqui</button>
+<script>
+    var nome = window.prompt('Qual é o seu nome?')
+    var altura = Number.parseFloat(window.prompt('Qual sua altura?'))
+    var peso = Number.parseFloat(window.prompt('Qual é o seu peso?'))
+   var r1 = altura ** 2
+   var r2 = Number.parseInt(peso / r1)
+    window.alert(`${nome}, o seu índice de massa corporal é igual a ${r2} `)
+</script>
+</body>
+</html>
