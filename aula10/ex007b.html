@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de IMC</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Teste de IMC</h1>
+
+    <h2>
+        Teste o seu Índice de massa corporal e saiba se você está saudável.
+        
+    </h2>
+    <input type="number" name="altura" id="altura">altura
+    <input type="number" name="peso" id="peso">Peso <br>
+    <input type="button" value="Resultado" onclick="resultado()">
+    <div id="res">o resultado aparece aqui</div>
+    <script>
+        function resultado(){
+            var r1 = document.getElementById('altura')
+            var r2 = document.getElementById('peso')
+            var res = document.getElementById('res')
+            var n1 = Number(r1.value)
+            var n2 = Number(r2.value)
+            var a = n1 ** 2
+            var s = Number.parseInt(n2 / a)
+            var s2 = s >= 18.4 && s <= 24.9 ? 'Você está no seu peso ideal, continue cuidando da sua saúde!': 'Você não está no seu peso ideal, procure um especialista para se orientar melhor.'
+        res.innerText = `O seu índice de massa corporal é igual a ${s}. ${s2} `
+            
+        }
+
+    </script>
+</body>
+</html>
