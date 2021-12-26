@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de IMC</title>
+    <script>
+        var nome = window.prompt('Olá! Qual é o seu nome?')
+        window.alert(`Prazer em te conhecer, ${nome}! Bem vindo a nossa página!`)
+        window.document.querySelector('subtitulo').innerText = `${nome}, teste seu índice de massa corporal aqui e saiba se você está no seu peso ideal.`
+
+        function resultado(){
+            var r1 = document.getElementById('altura')
+            var r2 = document.getElementById('peso')
+            var res = document.getElementById('res')
+            var n1 = Number(r1.value)
+            var n2 = Number(r2.value)
+            var a = n1 ** 2
+            var s = Number.parseInt(n2 / a)
+            var s2 = s >= 18.4 && s <= 24.9 ? 'Você está no seu peso ideal, continue cuidando da sua saúde!': ' Infelizmente você não está no seu peso ideal, mas não se preucupe, basta procurar um especialista da saúde para  te orientar melhor.'
+        res.innerText = `${nome}, o seu índice de massa corporal é igual a ${s}. ${s2} `
+        res.style.background = 'orange'
+            
+        } 
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de IMC</h1>
+        <h2 id="subtitulo"> Consulte aqui o seu índice de massa corporal e descubra se você está no seu peso ideal.</h2>
+    </header>
+    <main>
+        <div id="conteiner">
+            <div id="t1">ALTURA</div><div id="t2">PESO</div>
+            <div id="contain">
+                <input type="number" name="altura" id="altura" class="numero">
+                        <input type="number" name="peso" id="peso" class="numero"> <br>
+                        <input type="button" value=" Resultado." onclick="resultado()" class="botão">
+            </div>
+        </div>
+        <div id="res"></div>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
