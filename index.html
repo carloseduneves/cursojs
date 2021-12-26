@@ -19,8 +19,14 @@
             var a = n1 ** 2
             var s = Number.parseInt(n2 / a)
             var s2 = s >= 18.4 && s <= 24.9 ? 'Você está no seu peso ideal, continue cuidando da sua saúde!': ' Infelizmente você não está no seu peso ideal, mas não se preocupe, basta procurar um especialista da área da saúde para  te orientar melhor.'
-        res.innerText = `${nome}, o seu índice de massa corporal é igual a ${s}. ${s2} `
+        if(s >= 18.5) {
+            res.innerText = `${nome}, o seu índice de massa corporal é igual a ${s}. ${s2} `
+        }
+        else{
+            res.innerText = `${nome}, o seu índice de massa corporal é igual a ${s}. Você está muito abaixo do peso, procure um médico!`
+        }
         res.style.background = 'orange'
+        res.style.display = 'block'
             
         } 
     </script>
@@ -36,8 +42,8 @@
             <div id="t1">ALTURA</div><div id="t2">PESO</div>
             <div id="contain">
                 <input type="number" name="altura" id="altura" class="numero">
-                        <input type="number" name="peso" id="peso" class="numero"> <br>
-                        <input type="button" value=" Resultado." onclick="resultado()" class="botão">
+                <input type="number" name="peso" id="peso" class="numero"> <br>
+                <a href="#res"><input type="button" value=" Resultado." onclick="resultado()" class="botão"></a>
             </div>
         </div>
         <div id="res"></div>
